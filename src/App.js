@@ -17,10 +17,12 @@ function App() {
 		setCart([...cart, item]);
 	};
 
-	const removeItem = removeItem => {
-		const currentCart = [...cart];
-		const updatedCart = currentCart.filter(item => item.id !== removeItem);
-		setCart(updatedCart);
+	const removeItem = item => {
+		const idNumber = item;
+		// console.log(item);
+		const updatedCart = cart.filter((item) => 
+			item.id !== idNumber);
+		setCart([updatedCart]);
 }
 
 	return (
